@@ -1,7 +1,7 @@
-require "test/unit"
-
 require "rubygems"
 require "mocha"
+require "test/unit"
+require 'mocha/test_unit'
 begin; require "redgreen"; rescue LoadError; end
 
 module ActiveSupport

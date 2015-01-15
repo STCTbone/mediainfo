@@ -111,7 +111,7 @@ class MediainfoTest < ActiveSupport::TestCase
   end
   
   test "retains last system command generated" do
-    p = File.expand_path "./test/fixtures/dinner.3g2.xml"
+    p = File.expand_path "fixtures/dinner.3g2.xml"
     m = Mediainfo.new p
     assert_equal "#{Mediainfo.path} \"#{p}\" --Output=XML", m.last_command
   end

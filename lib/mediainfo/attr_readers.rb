@@ -9,6 +9,7 @@ module AttrReaders
     
     before_type_cast_method_name = "#{method_name}_before_type_cast"
     mediainfo_key = mediainfo_key.gsub(/\W+/, "_").downcase if mediainfo_key
+    # mediainfo_key = mediainfo_key.gsub(/_+$/, '')
     
     if m = stream_class_type.match(/^#{Regexp.union *Mediainfo::NON_GENERAL_SECTIONS.map { |x| x.to_s.capitalize }}$/)
       k1 = stream_class_type.downcase.to_sym
