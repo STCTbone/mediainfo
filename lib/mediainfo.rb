@@ -112,7 +112,7 @@ class Mediainfo
   # AttrReaders depends on this.
   def self.supported_attributes; @supported_attributes ||= []; end
   
-  SECTIONS             = [:general, :video, :audio, :image, :menu, :text]
+  SECTIONS             = [:general, :video, :audio, :image, :menu, :text, :other]
   NON_GENERAL_SECTIONS = SECTIONS - [:general]
   
   attr_reader :streams
@@ -346,6 +346,10 @@ class Mediainfo
     mediainfo_int_reader :height
    
     def frame_size; "#{width}x#{height}" if width or height; end
+  end
+
+  class OtherStream < Stream
+
   end
 
   class TextStream < Stream
