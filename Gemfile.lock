@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mediainfo (0.7.2)
+    mediainfo (0.7.3)
 
 GEM
   remote: https://rubygems.org/
